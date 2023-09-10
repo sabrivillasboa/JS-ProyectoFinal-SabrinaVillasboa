@@ -39,6 +39,17 @@ try {
         });
         console.log(carrito) 
         carritoStorage();
+        
+        Toastify({
+            text: "Producto agregado a tu carrito ✔",
+            duration: 3000,
+            position: "right",
+            gravity: "bottom", 
+            style: {
+            background: "#FF971D",
+            },
+        }).showToast();
+
     });
     });
     } catch (error) {
@@ -91,6 +102,17 @@ function actualizarCarrito() {
 
     eliminar.addEventListener("click", () =>{
         eliminarLibro(libro.id);
+
+        Toastify({
+            text: "Producto eliminado de tu carrito",
+            duration: 3000,
+            position: "right",
+            gravity: "bottom", 
+            style: {
+            background: "rgba(255, 59, 59, 0.8)",
+            },
+        }).showToast();
+
     });
 
     modalContainer.append(div);
@@ -115,6 +137,10 @@ const eliminarLibro = (id) =>{
 const carritoStorage = () =>{
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
+window.addEventListener("load", () => {
+    cerrarModal();
+});
 
 actualizarCarrito();
 
