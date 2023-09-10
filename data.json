@@ -1,0 +1,87 @@
+
+[
+    {
+        "id": 1, 
+        "nombre": "El jardin secreto", 
+        "precio": 7000,
+        "imagen": "./images/El-jardin-secreto.jpg",
+        "autor": "Frances Hodgson Burnett"
+    },
+    {
+        "id": 2, 
+        "nombre": "Antes de Diciembre", 
+        "precio": 10300,
+        "imagen": "./images/Antes-de-diciembre_.jpg",
+        "autor": "Joana Marcús"
+    },
+    {
+        "id": 3,
+        "nombre": "La Divina Comedia",
+        "precio": 6000,
+        "imagen": "./images/La-divina-comedia.jpg",
+        "autor": "Dante Alighieri"
+    },
+    {
+        "id": 4,
+        "nombre": "La iliada",
+        "precio": 5000,
+        "imagen": "./images/La-Iliada-SF.jpg",
+        "autor": "Homero"
+    },
+    {
+        "id": 5,
+        "nombre": "Harry Potter",
+        "precio": 12000,
+        "imagen": "./images/HarryPotter.jpg",
+        "autor": "J. K. Rowling"
+    },
+    {
+        "id": 6, 
+        "nombre": "La ladrona de libros", 
+        "precio": 7000,
+        "imagen": "./images/La-ladrona-de-libros.jpg",
+        "autor": "Markus Zusak"
+    },
+    {
+        "id": 7, 
+        "nombre": "Como ganar amigos ", 
+        "precio": 8000,
+        "imagen": "./images/Como-Ganar-amigos.jpg",
+        "autor": "Dale Carnegie"
+    },
+    {
+        "id": 8, 
+        "nombre": "Don Quijote", 
+        "precio": 7000,
+        "imagen": "./images/Don-Quijote-sf.jpg",
+        "autor": "Miguel de Cervantes"
+    },
+    {
+        "id": 9, 
+        "nombre": "El fantasma de Cantervielle", 
+        "precio": 6000,
+        "imagen": "./images/Elfantasma-de-Canterville.jpg",
+        "autor": "Oscar Wilde"
+    },
+    {
+        "id": 10, 
+        "nombre": "It", 
+        "precio": 12000,
+        "imagen": "./images/It.jpg",
+        "autor": "Stephen King"
+    },
+    {
+        "id": 11, 
+        "nombre": "Narnia", 
+        "precio": 13000,
+        "imagen": "./images/Narnia.jpg",
+        "autor": "C. S. Lewis"
+    },
+    {
+        "id": 12, 
+        "nombre": "Tus zonas erroneas", 
+        "precio": 8000,
+        "imagen": "./images/Tus-zonas-erroneas.jpg",
+        "autor": "Wayne Dyer"
+    }
+]
