@@ -54,7 +54,7 @@ h1{
     width: auto;
 }
 
-h3{
+.titulo-libro{
     font-size: 1rem;
     margin: 0 0 0.9rem 0.9rem ;
 }
@@ -71,10 +71,51 @@ span{
 
 .boton{
     background-color: var(--color-principal);
-    width: 30%;
-    height: 2rem;
+    width: 25%;
+    height: 2.2rem;
     border: none;
     border-radius: 0.5rem;
     margin: 0 0 0.9rem 0.9rem;
     color: var(--color-secundario);
+}
+
+#mostrar-carrito{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    height: calc(100vh - 80 px);
+    background-color: var(--color-secundario);
+    z-index: 20;
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-height: 80vh;
+    justify-content: space-between;
+}
+
+.div-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.modalHeader-title{
+    line-height: 4rem;
+    text-align: center;
+    justify-self: center;
+    font-weight: 600;
+}
+
+.img-carrito{
+    height: 90%;
+    width: auto;
+}
+
+.total{
+    margin: 1rem 0;
+    font-weight: 600;
 }
