@@ -44,13 +44,10 @@ h1{
     padding: 0;
     border: solid 0.5px #d1d0d0;
     background-color: var(--color-secundario);
-    box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
 }
 
 .img-libro{
-    height: 90%;
+    height: 95%;
     width: auto;
 }
 
@@ -59,7 +56,7 @@ h1{
     margin: 0 0 0.9rem 0.9rem ;
 }
 
-p{
+.p-card{
     font-size: 0.8rem;
     margin: 0 0 0.9rem 0.9rem;
 }
@@ -72,7 +69,7 @@ span{
 .boton{
     background-color: var(--color-principal);
     width: 25%;
-    height: 2.2rem;
+    height: 2.7rem;
     border: none;
     border-radius: 0.5rem;
     margin: 0 0 0.9rem 0.9rem;
@@ -82,7 +79,6 @@ span{
 #mostrar-carrito{
     position: fixed;
     top: 80px;
-    right: 0;
     height: calc(100vh - 80 px);
     background-color: var(--color-secundario);
     z-index: 20;
@@ -115,7 +111,33 @@ span{
     width: auto;
 }
 
+.div-total{
+    display: flex;
+    border-top: 1px solid #C0C2C4;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .total{
-    margin: 1rem 0;
+    padding: 1rem 0;
     font-weight: 600;
+}
+
+#btn-comprar{
+    background-color: rgba(27, 218, 57, 0.87);
+    width: 25%;
+    height: 2.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-secundario);
+}
+
+.footer{
+    background-color: var(--color-principal);
+    height: 4rem;
+}
+
+.p-footer{
+    font-size: 1rem;
+    margin: 0;
 }

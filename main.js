@@ -20,7 +20,7 @@ try {
         div.innerHTML = `
         <img class="img-libro" src="${libro.imagen}" alt="${libro.nombre}" />
         <h3 class="titulo-libro">${libro.nombre}</h3>
-        <p>Autor: ${libro.autor}</p>
+        <p class="p-card">Autor: ${libro.autor}</p>
         <span>$${libro.precio}</span>
     `;
     contenedor.append(div);
@@ -41,15 +41,14 @@ try {
         carritoStorage();
         
         Toastify({
-            text: "Producto agregado a tu carrito ✔",
+            text: " ✔ Producto agregado a tu carrito. ",
             duration: 3000,
             position: "right",
             gravity: "bottom", 
             style: {
-            background: "#FF971D",
+            background: "rgba(27, 218, 57, 0.87)",
             },
         }).showToast();
-
     });
     });
     } catch (error) {
@@ -59,30 +58,27 @@ try {
 pedirProductos();
 
 verCarrito.addEventListener("click", () => {
-    if (modalAbierto) {
-    cerrarModal();
-    } else {
-    abrirModal();
-    }
+    modalAbierto ? cerrarModal() : abrirModal();
 });
 
-function abrirModal() {
+const abrirModal = () => {
     modalAbierto = true;
     actualizarCarrito();
     mostrarCarrito.style.display = "block";
 }
 
-function cerrarModal() {
+const cerrarModal = () => {
     modalAbierto = false;
     mostrarCarrito.style.display = "none";
 }
 
-function actualizarCarrito() {
+const actualizarCarrito = () => {
     modalContainer.innerHTML = "";
     const modalHeader = document.createElement("div");
     modalHeader.className = "modalHeader";
     modalHeader.innerHTML = `
     <h5 class="modalHeader-title">Añade productos a tu carrito:</h5>
+    <hr/>
     `;
     modalContainer.append(modalHeader);
 
@@ -104,7 +100,7 @@ function actualizarCarrito() {
         eliminarLibro(libro.id);
 
         Toastify({
-            text: "Producto eliminado de tu carrito",
+            text: " ❌ Producto eliminado de tu carrito. ",
             duration: 3000,
             position: "right",
             gravity: "bottom", 
@@ -120,10 +116,18 @@ function actualizarCarrito() {
 
     const total= carrito.reduce((acum, item) => acum + item.precio, 0);
 
-    const totalCompra= document.createElement("h5");
-    totalCompra.innerHTML =`Total carrito: $${total}`;
-    totalCompra.className ="total"
+    const totalCompra= document.createElement("div");
+    totalCompra.className ="div-total"
+    totalCompra.innerHTML =`
+    <h5 class= "total">Total carrito: $${total}</h5>
+    <button id="btn-comprar">Comprar</button>
+    `;
     modalContainer.append(totalCompra);
+
+    const btnComprar= document.getElementById("btn-comprar");
+    btnComprar.addEventListener("click", ()=>{
+        Swal.fire('Redireccion a otra pagina para realizar la compra.')
+    })
 
 };
 
