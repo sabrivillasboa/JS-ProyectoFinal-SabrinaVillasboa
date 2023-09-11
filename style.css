@@ -76,6 +76,13 @@ span{
     color: var(--color-secundario);
 }
 
+.boton:hover {
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
 #mostrar-carrito{
     position: fixed;
     top: 80px;
@@ -126,10 +133,17 @@ span{
 #btn-comprar{
     background-color: rgba(27, 218, 57, 0.87);
     width: 25%;
-    height: 2.2rem;
+    height: 2.7rem;
     border: none;
     border-radius: 0.5rem;
     color: var(--color-secundario);
+}
+
+#btn-comprar:hover {
+    border: 1px solid rgba(27, 218, 57, 0.87);
+    background-color: transparent;
+    color: rgba(27, 218, 57, 0.87);
+    font-weight: 600;
 }
 
 .footer{
